@@ -2,7 +2,7 @@
 
 A simulation of the 6-DOF robotic manipulator from `v1_2023/` and `v2_2026/`, built in ROS 2. The arm is modeled from my own SolidWorks CAD, and the same resolved-rates algorithm that runs on the Arduino drives it in RViz.
 
-**Video:** [RViz simulation](https://youtu.be/21rbbeKwHbQ)
+**Video:** [RViz simulation](https://youtu.be/b6Oi5uShVIs)
 
 ## What it does
 
@@ -49,4 +49,4 @@ cd tools && python3 make_urdf.py --no-sticks
 
 ## AI assistance
 
-The algorithm, DH model, hardware and CAD are my own work. The ROS 2 port, URDF generator and checking scripts were written with AI assistance (Claude Code) and checked against the arm's recorded output.
+The algorithm is from the Stevens Institute of Technology course material credited in the main README. The DH model, hardware and CAD are my own work. The ROS 2 port, URDF generator and checking scripts were written with AI assistance (Claude Code) and checked against the arm's recorded output.
