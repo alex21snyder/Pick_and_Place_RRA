@@ -12,7 +12,7 @@ A simulation of the 6-DOF robotic manipulator from `v1_2023/` and `v2_2026/`, bu
 
 ## Run it
 
-Requires ROS 2 (developed on Lyrical Luth, Ubuntu 26.04) and numpy.
+Requires ROS 2 (developed on Lyrical Luth, Ubuntu 26.04) and numpy. The commands below use `~/v3_2026_ros2`; adjust the path to wherever you cloned this folder.
 
 ```
 source /opt/ros/lyrical/setup.bash
@@ -24,14 +24,14 @@ ros2 launch ~/v3_2026_ros2/launch/display.launch.py demo:=false      # wait for 
 Check the algorithm port against the Arduino results:
 
 ```
-cd rra_py && python3 rra.py        # prints MATCHES ARDUINO
-cd tools && python3 check_fk.py    # URDF vs DH forward kinematics
+cd ~/v3_2026_ros2/rra_py && python3 rra.py        # prints MATCHES ARDUINO
+cd ~/v3_2026_ros2/tools && python3 check_fk.py    # URDF vs DH forward kinematics
 ```
 
 Regenerate the URDF after changing the DH table or meshes:
 
 ```
-cd tools && python3 make_urdf.py --no-sticks
+cd ~/v3_2026_ros2/tools && python3 make_urdf.py --no-sticks
 ```
 
 ## Layout
@@ -39,6 +39,7 @@ cd tools && python3 make_urdf.py --no-sticks
 - `meshes/`: one STL per link, exported from the CAD assembly at the straight-up home pose
 - `urdf/`: `arm.urdf` (generated, do not edit by hand)
 - `launch/`: `display.launch.py`
+- `rviz/`: saved RViz configuration
 - `rra_py/`: the algorithm port and the ROS 2 node
 - `tools/`: `dh.py` (DH tables), `make_urdf.py`, `check_fk.py`
 
