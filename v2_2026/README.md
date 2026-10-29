@@ -23,6 +23,8 @@ On startup it runs one pick-and-place routine, printing the joint angles to the 
 - `print_state.ino`: prints the joint angles.
 - `robotstate.h`: the structs (`RobotState`, `Frames`, `RRAParams`, `ConvergenceError`).
 - `config.h`: named constants (pins, timing, gripper positions, microseconds per degree, damping factor).
+- `close_gripper.ino`: closes the gripper to pick up the object, with a settling delay before and a pick delay after.
+- `open_gripper.ino`: opens the gripper to release the object, with a settling delay before and a place delay after.
 
 ## Hardware and libraries
 
