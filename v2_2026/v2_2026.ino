@@ -48,7 +48,7 @@ void setup() {
   Serial.print("\n\nStarting Q(artificial) values =");
   print_state(state);
 
-  // MOTION 1: command tool center point to go from home to 1st location desired.
+  // MOTION 1: command tool center point to go from Perch to 1st location desired.
   BLA::Matrix<3, 1> Xd = { 188.0, -104.0, 312.0 };              // position desired
   BLA::Matrix<3, 3> Rd = { 0, 0, 1.0, 0, 1.0, 0, -1.0, 0, 0 };  // orientation desired
   if (!rra(state, error, Xd, Rd, params)) {

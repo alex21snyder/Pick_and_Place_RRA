@@ -7,14 +7,14 @@ Reset parameters and assign starting values to variables.
 void init_robot(RobotState& state, RRAParams& params, ConvergenceError& error, float& pos7) {
   Serial.begin(SERIAL_BAUD);  // initialize serial communication, the channel arduino uses to send text back to computer
 
-  // build the robot initial state using the RobotState struct
+  // Build the robot initial state using the RobotState struct
   state.qr = Perch;                            // real motor values (microseconds)
   state.q = { 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 };  // artificial motor values (degrees)
 
-  // pos7 stays separate - it's the end effector, not one of the 6 arm joints
+  // Pos7 stays separate - it's the end effector, not one of the 6 arm joints
   pos7 = GRIPPER_OPEN;
 
-  // frames and Jacobian start filled with 0
+  // Frames and Jacobian start filled with 0
   state.frames.f1.Fill(0);
   state.frames.f2.Fill(0);
   state.frames.f3.Fill(0);
